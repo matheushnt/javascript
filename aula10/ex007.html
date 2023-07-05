@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        body {
+            background-color: #90A19D;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        main {
+            background-color: #196774;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.886);
+            width: 450px;
+            height: 250px;
+            margin: auto;
+            margin-top: 25px;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        input {
+            width: 100px;
+            height: 20px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.429);
+            border: 0px;
+            border-radius: 4px;
+        }
+        input.soma {
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.429);
+            background-color: #F0941F;
+            width: 75px;
+            height: 25px;
+            border: 0px;
+            border-radius: 4px;
+            margin-left: 15px;
+        }
+
+        div#result {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Somando Valores</h1>
+        <input type="number" name="txtn1" id="txtn1"> +
+        <input type="number" name="txtn2" id="txtn2">
+        <input type="button" value="Somar" class="soma" onclick="somar()">
+        <div id="result">Resultado</div>
+    </main>
+    <script>
+       function somar() {
+        var txtn1 = window.document.getElementById('txtn1')
+        var txtn2 = window.document.getElementById('txtn2')
+        var result = window.document.getElementById('result')
+        var n1 = Number(txtn1.value)
+        var n2 = Number(txtn2.value)
+        var soma = n1 + n2
+        window.document.getElementById('result').innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${soma}</strong>.`
+       } 
+    </script>
+</body>
+</html>
